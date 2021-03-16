@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun With Coding!</title>
+
+  <script>
+    function showSolution(i) {
+      var imgs = document.getElementsByTagName("img");
+      imgs[i].style.visibility = 'visible';
+      document.getElementById(`big-o-div-${i}`).style.visibility = 'visible';
+    }
+    function showBigO(i) {
+      document.getElementById(`big-o-${i}`).style.visibility = 'visible';
+    }
+  </script>
+</head>
+<body>
+  <h1>Common elements in 2 Arrays</h1>
+
+  <p>
+    <h2>Naive solution</h2>
+    <div><button onclick="showSolution(0)">display</button></div>
+    <img src="../../img/2array-naive.png" style="visibility:hidden;">
+
+    <div id="big-o-div-0" style="visibility:hidden;">
+      <div>Big-O Notation?</div>
+      <div><button onclick="showBigO(0)">display</button></div>
+      <div id="big-o-0" style="visibility:hidden;">O(a*b)</div>
+    </div>
+  </p>
+
+  <p>
+    <h2>Optimal solution 1</h2>
+
+    <div><button onclick="showSolution(1)">display</button></div>
+    <img src="../../img/2array-optimal.png" style="visibility:hidden;">
+
+    <div id="big-o-div-1" style="visibility:hidden;">
+      <div>Big-O Notation?</div>
+      <div><button onclick="showBigO(1)">display</button></div>
+      <div id="big-o-1" style="visibility:hidden;">O(a+b)</div>
+    </div>
+  </p>  
+
+  <p>
+    <h2>Optimal solution 2</h2>
+
+    <div><button onclick="showSolution(2)">display</button></div>
+    <img src="../../img/2array-optimal2.png" style="visibility:hidden;">
+
+    <div id="big-o-div-2" style="visibility:hidden;">
+      <div>Big-O Notation?</div>
+      <div><button onclick="showBigO(2)">display</button></div>
+      <div id="big-o-2" style="visibility:hidden;">O(a+b)</div>
+    </div>
+  </p>  
+</body>
+</html>
